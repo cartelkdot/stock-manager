@@ -43,6 +43,15 @@ public class StockManager
         }
     }
     
+    public void printLowStockProducts(int upLimit)
+    {
+        for (Product product : stock) {
+            if(product.getQuantity() < upLimit) {
+                System.out.println(product.toString());
+            }
+        }
+    }
+    
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
